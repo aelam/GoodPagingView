@@ -40,6 +40,7 @@
 		9445D5E916372AF40069E6C1 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 9445D5E116372AF40069E6C1 /* UIImageView+WebCache.m */; };
 		9445D5EB16372B9C0069E6C1 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9445D5EA16372B9C0069E6C1 /* ImageIO.framework */; };
 		9445D5ED16372BB90069E6C1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9445D5EC16372BB90069E6C1 /* MapKit.framework */; };
+		9445D6061637358F0069E6C1 /* CaptionedPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9445D6051637358F0069E6C1 /* CaptionedPhotoView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,6 +99,8 @@
 		9445D5E116372AF40069E6C1 /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		9445D5EA16372B9C0069E6C1 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		9445D5EC16372BB90069E6C1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		9445D6041637358F0069E6C1 /* CaptionedPhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptionedPhotoView.h; sourceTree = "<group>"; };
+		9445D6051637358F0069E6C1 /* CaptionedPhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaptionedPhotoView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +191,8 @@
 				9445D5921637140E0069E6C1 /* NPPagingView.m */,
 				9445D5931637140E0069E6C1 /* NPPagingViewController.h */,
 				9445D5941637140E0069E6C1 /* NPPagingViewController.m */,
+				9445D6041637358F0069E6C1 /* CaptionedPhotoView.h */,
+				9445D6051637358F0069E6C1 /* CaptionedPhotoView.m */,
 			);
 			path = NPPagingView;
 			sourceTree = "<group>";
@@ -323,6 +328,7 @@
 				9445D5E716372AF40069E6C1 /* SDWebImagePrefetcher.m in Sources */,
 				9445D5E816372AF40069E6C1 /* UIButton+WebCache.m in Sources */,
 				9445D5E916372AF40069E6C1 /* UIImageView+WebCache.m in Sources */,
+				9445D6061637358F0069E6C1 /* CaptionedPhotoView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

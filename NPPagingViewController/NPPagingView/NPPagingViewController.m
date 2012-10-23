@@ -25,8 +25,12 @@
     _pagingView.layer.borderColor = [UIColor greenColor].CGColor;
     _pagingView.layer.borderWidth = 3;
     _pagingView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-
+    _pagingView.delegate = self;
     [self.view addSubview:_pagingView];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
 }
 
 - (void)didReceiveMemoryWarning

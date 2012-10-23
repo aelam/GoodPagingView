@@ -364,6 +364,28 @@
 
 }
 
+- (void)setInitialPageIndex:(NSUInteger)index {
+    // Validate
+    if (index >= [self numberOfPhotos]) index = [self numberOfPhotos]-1;
+    _currentPageIndex = index;
+    [self jumpToPageAtIndex:index];
+    if (!_viewIsActive) [self tilePages]; // Force tiling if view is not visible
+}
+
+- (void)jumpToPageAtIndex:(NSUInteger)index {
+	
+	// Change page
+	if (index < [self numberOfPhotos]) {
+		CGRect pageFrame = [self frameForPageAtIndex:index];
+		_pagingScrollView.contentOffset = CGPointMake(pageFrame.origin.x - PADDING, 0);
+	}
+		
+}
+
+- (void)gotoPreviousPage { [self jumpToPageAtIndex:_currentPageIndex-1]; }
+- (void)gotoNextPage { [self jumpToPageAtIndex:_currentPageIndex+1]; }
+
+
 
 - (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
     
