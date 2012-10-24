@@ -13,17 +13,39 @@
 
 @interface ViewController ()
 
+
 @end
 
-@implementation ViewController
+@implementation ViewController {
+    NSArray *images;
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    images = [[NSArray alloc] initWithObjects:
+              @"http://farm4.static.flickr.com/3567/3523321514_371d9ac42f_b.jpg",
+              @"http://farm4.static.flickr.com/3629/3339128908_7aecabc34b_b.jpg",
+              @"http://farm4.static.flickr.com/3364/3338617424_7ff836d55f_b.jpg",
+              @"http://farm4.static.flickr.com/3590/3329114220_5fbc5bc92b_b.jpg",
+              @"http://farm4.static.flickr.com/3567/3523321514_371d9ac42f_b.jpg",
+              @"http://farm4.static.flickr.com/3629/3339128908_7aecabc34b_b.jpg",
+              @"http://farm4.static.flickr.com/3364/3338617424_7ff836d55f_b.jpg",
+              @"http://farm4.static.flickr.com/3590/3329114220_5fbc5bc92b_b.jpg",
+              @"http://farm4.static.flickr.com/3567/3523321514_371d9ac42f_b.jpg",
+              @"http://farm4.static.flickr.com/3629/3339128908_7aecabc34b_b.jpg",
+              @"http://farm4.static.flickr.com/3364/3338617424_7ff836d55f_b.jpg",
+              @"http://farm4.static.flickr.com/3590/3329114220_5fbc5bc92b_b.jpg",
+              nil];
+    
+
 	// Do any additional setup after loading the view, typically from a nib.
     _pagingView.delegate = self;
+//    [_pagingView reloadData];
     [_pagingView setInitialPageIndex:2];
-
+    
+    
 }
 
 
@@ -40,8 +62,10 @@
     
     NSString *name = [NSString stringWithFormat:@"photo%dl.jpg",index+1];
     NSLog(@"request Image : %@",name);
-    UIImage *image = [UIImage imageNamed:name];
-    [view setImage:image photoSize:NIPhotoScrollViewPhotoSizeOriginal];
+//    UIImage *image = [UIImage imageNamed:name];
+    NSString *url = [images objectAtIndex:index];
+//    [view setImage:image photoSize:NIPhotoScrollViewPhotoSizeOriginal];
+    [view setOriginalImageURL:[NSURL URLWithString:url] placeholder:nil];
     [view setCaption:[NSString stringWithFormat:@"--%d--",index]];
     return view;
 }

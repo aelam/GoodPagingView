@@ -41,6 +41,7 @@
 		9445D5EB16372B9C0069E6C1 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9445D5EA16372B9C0069E6C1 /* ImageIO.framework */; };
 		9445D5ED16372BB90069E6C1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9445D5EC16372BB90069E6C1 /* MapKit.framework */; };
 		9445D6061637358F0069E6C1 /* CaptionedPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9445D6051637358F0069E6C1 /* CaptionedPhotoView.m */; };
+		949CDF561637899600B1995E /* NPNetPhotoScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 949CDF551637899500B1995E /* NPNetPhotoScrollView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -101,6 +102,8 @@
 		9445D5EC16372BB90069E6C1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		9445D6041637358F0069E6C1 /* CaptionedPhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptionedPhotoView.h; sourceTree = "<group>"; };
 		9445D6051637358F0069E6C1 /* CaptionedPhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaptionedPhotoView.m; sourceTree = "<group>"; };
+		949CDF541637899400B1995E /* NPNetPhotoScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPNetPhotoScrollView.h; sourceTree = "<group>"; };
+		949CDF551637899500B1995E /* NPNetPhotoScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPNetPhotoScrollView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +190,8 @@
 				9445D5C8163726920069E6C1 /* NIPhotoScrollViewPhotoSize.h */,
 				9445D5C4163725EA0069E6C1 /* NIPhotoScrollView.h */,
 				9445D5C5163725EA0069E6C1 /* NIPhotoScrollView.m */,
+				949CDF541637899400B1995E /* NPNetPhotoScrollView.h */,
+				949CDF551637899500B1995E /* NPNetPhotoScrollView.m */,
 				9445D5911637140E0069E6C1 /* NPPagingView.h */,
 				9445D5921637140E0069E6C1 /* NPPagingView.m */,
 				9445D5931637140E0069E6C1 /* NPPagingViewController.h */,
@@ -329,6 +334,7 @@
 				9445D5E816372AF40069E6C1 /* UIButton+WebCache.m in Sources */,
 				9445D5E916372AF40069E6C1 /* UIImageView+WebCache.m in Sources */,
 				9445D6061637358F0069E6C1 /* CaptionedPhotoView.m in Sources */,
+				949CDF561637899600B1995E /* NPNetPhotoScrollView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

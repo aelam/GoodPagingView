@@ -99,8 +99,10 @@
     _pagingScrollView.contentSize = [self contentSizeForPagingScrollView];
 	[self addSubview:_pagingScrollView];
 
-    _viewIsActive = YES;
+}
 
+-(void)willMoveToSuperview:(UIView *)newSuperview {
+    _viewIsActive = YES;
 }
 
 #pragma mark - Paging
@@ -146,14 +148,6 @@
 			[self configurePage:page forIndex:index];
 			[_visiblePages addObject:page];
 			[_pagingScrollView addSubview:page];
-//			MWLog(@"Added page at index %i", index);
-            
-            // Add caption
-//            MWCaptionView *captionView = [self captionViewForPhotoAtIndex:index];
-//            captionView.frame = [self frameForCaptionView:captionView atIndex:index];
-//            [_pagingScrollView addSubview:captionView];
-//            page.captionView = captionView;
-            
 		}
 	}
 	
@@ -369,7 +363,8 @@
     if (index >= [self numberOfPhotos]) index = [self numberOfPhotos]-1;
     _currentPageIndex = index;
     [self jumpToPageAtIndex:index];
-    if (!_viewIsActive) [self tilePages]; // Force tiling if view is not visible
+    if (!_viewIsActive)
+        [self tilePages]; // Force tiling if view is not visible
 }
 
 - (void)jumpToPageAtIndex:(NSUInteger)index {
